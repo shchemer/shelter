@@ -47,6 +47,10 @@ h5 {
 	@include textSettings($arial, $regular, 32, 0, 160%);
 }
 
-.logo-title {
+.logo__title {
 	@include textSettings($georgia, $regular, 32, 6%, 110%);
+}
+
+.logo__subtitle {
+	@include textSettings($arial, $regular, 13, 10%, auto)
 }
