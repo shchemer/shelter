@@ -1,14 +1,50 @@
-$georgia: Georgia, serif;
-$arial: Arial, sans-serif;
-$regular: 400;
-$bold: 700;
+@font-face {
+	font-family: Arial;
+	src: url(../../fonts/Arial.woff2),
+		  url(../../fonts/Arial.woff);
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: Arial;
+	src: url(../../fonts/Arial-Italic.woff2),
+		  url(../../fonts/Arial-Italic.woff);
+	font-style: italic;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: Georgia;
+	src: url(../../fonts/Georgia.woff2),
+		  url(../../fonts/Georgia.woff);
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: Georgia;
+	src: url(../../fonts/Georgia-Bold.woff2),
+		  url(../../fonts/Georgia-Bold.woff);
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: Georgia;
+	src: url(../../fonts/Georgia-Italic.woff2),
+		  url(../../fonts/Georgia-Italic.woff);
+	font-style: italic;
+	font-weight: 400;
+}
 
 @mixin textSettings($ffamily, $fweight, $fsize, $letspacing, $lineheight, $fstyle: normal) {
 	font-family: $ffamily;
 	font-weight: $fweight;
-	font-size: $fsize;
+	font-size: #{$fsize / $body-font-size}em;
 	letter-spacing: $letspacing;
 	line-height: $lineheight;
+	font-style: $fstyle;
 }
 
 h2 {
