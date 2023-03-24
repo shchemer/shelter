@@ -1,19 +1,29 @@
-// colors
-$color-light-xl: #FFFFFF;
-$color-light-l: #F6F6F6;
-$color-light-s: #FAFAFA;
-$color-dark-s: #CDCDCD;
-$color-dark-m: #B2B2B2;
-$color-dark-l: #545454;
-$color-dark-xl: #4C4C4C;
-$color-dark-2xl: #444444;
-$color-dark-3xl: #292929;
-$color-primary: #F1CDB3;
-$color-primary-ligth: #FDDCC4;
-//$start-screen-gradient-background:;
-//$footer-gradient-background:;
+*,
+*::before,
+*::after {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
-//base
+ol,
+ul,
+li {
+	list-style-type: none;
+}
 
-$body-font-size: 16px;
+a {
+	text-decoration: none;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	@include textSettings($georgia, $regular);
+	background: $color-light-xl;
+	color: $color-dark-l;
+}
 
