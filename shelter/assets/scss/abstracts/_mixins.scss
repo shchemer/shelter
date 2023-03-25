@@ -1,0 +1,26 @@
+@mixin textSettings($ffamily, $fweight, $fsize, $letspacing: 0, $lineheight: normal, $fstyle: normal) {
+	font-family: $ffamily;
+	font-weight: $fweight;
+	font-size: calc($fsize / $body-fsize)+rem; 
+	letter-spacing: letterSpacing($fsize, $letspacing);
+	line-height: $lineheight;
+	font-style: $fstyle;
+}
+
+@mixin flexAllCenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin paddingForBlocks {
+	padding-top: 80px;
+	padding-bottom: 100px;
+}
+
+@mixin buttonStyle {
+	@include flexAllCenter;
+	color: $color-dark-3xl;
+	padding: 15px 45px;
+	border-radius: 100px;
+}
