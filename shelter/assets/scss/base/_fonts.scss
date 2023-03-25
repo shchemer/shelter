@@ -38,37 +38,30 @@
 	font-weight: 400;
 }
 
-@mixin textSettings($ffamily, $fweight, $fsize, $letspacing, $lineheight, $fstyle: normal) {
-	font-family: $ffamily;
-	font-weight: $fweight;
-	font-size: #{$fsize / $body-font-size}em;
-	letter-spacing: $letspacing;
-	line-height: $lineheight;
-	font-style: $fstyle;
-}
+@import "base";
 
 h2 {
 	@include textSettings($georgia, $regular, 44, 0, 130%);
 }
 
 h3 {
-	@include textSettings($georgia, $regular, 35, 6%, 130%);
+	@include textSettings($georgia, $regular, 35, 6, 130%);
 }
 
 .h3-mobile {
-	@include textSettings($georgia, $regular, 25, 6%, 130%);
+	@include textSettings($georgia, $regular, 25, 6, 130%);
 }
 
 h4 {
-	@include textSettings($georgia, $regular, 20, 6%, 115%);
+	@include textSettings($georgia, $regular, 20, 6, 115%);
 }
 
 h5 {
-	@include textSettings($georgia, $regular, 15, 6%, 110%);
+	@include textSettings($georgia, $regular, 15, 6, 110%);
 }
 
 .h5-modal-window {
-	@include textSettings($georgia, $bold, 15, 6%, 110%);
+	@include textSettings($georgia, $bold, 15, 6, 110%);
 }
 
 .paragraph-l {
@@ -84,9 +77,9 @@ h5 {
 }
 
 .logo__title {
-	@include textSettings($georgia, $regular, 32, 6%, 110%);
+	@include textSettings($georgia, $regular, 32, 6, 110%);
 }
 
 .logo__subtitle {
-	@include textSettings($arial, $regular, 13, 10%, auto)
+	@include textSettings($arial, $regular, 13, 10)
 }
