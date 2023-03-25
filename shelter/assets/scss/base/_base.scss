@@ -22,8 +22,15 @@ html, body {
 }
 
 body {
-	@include textSettings($georgia, $regular);
+	@include textSettings($georgia, $regular, $body-fsize);
 	background: $color-light-xl;
 	color: $color-dark-l;
 }
 
+._container {
+	margin: auto;
+	overflow: hidden;
+	max-width: 1200px;
+	padding: 0 40px;
+	box-sizing: content-box;
+}
