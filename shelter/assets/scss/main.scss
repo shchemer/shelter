@@ -1,3 +1,11 @@
 @import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
 @import "base/fonts";
-@import "base/base";
+@import "layout/header";
+@import "layout/not-only";
+@import "layout/about";
+@import "layout/pets";
+@import "layout/help";
+@import "layout/donation";
+@import "layout/footer";
