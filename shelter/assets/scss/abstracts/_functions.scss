@@ -1,0 +1,8 @@
+@function letterSpacing($fsize, $letspacing) {
+	@if ($letspacing == 0) {
+		@return normal;
+	}
+	@else {
+		@return (calc(($letspacing * $fsize) / 100) + px);
+	}
+}
