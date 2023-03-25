@@ -6,17 +6,21 @@
 	flex: 0 1 50%;
 }
 .about__image {
-	@include flexAllCenter;
+	display: flex;
+   align-items: flex-start;
+   justify-content: center;
+   padding: 0 0 0 60px;
 }
 .about__body {
-	padding: 14px 0;
-	max-width: 380px;
+	padding: 14px 0 0 4px;
+	max-width: 430px;
 }
 .about__body > *:not(:last-child) {
 	margin: 0 0 25px 0;
 }
 .about__title {
 	color: $color-dark-l;
+	max-width: 370px;
 }
 .about__subtitle {
 	color: $color-dark-xl;

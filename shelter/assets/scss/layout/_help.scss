@@ -1,9 +1,11 @@
 .help__container {
 	@include paddingForBlocks;
+	padding-top: 77px;
 }
 .help__title {
 	text-align: center;
 	margin: 0 0 60px 0;
+	padding: 0 0 0 18px;
 }
 .help__body {
 	display: flex;
@@ -11,6 +13,7 @@
 	flex-wrap: wrap;
 	column-gap: 120px;
 	row-gap: 55px;
+	padding: 0 0 0 18px;
 }
 .help__item {
 	@include flexAllCenter;

@@ -14,7 +14,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color: $color-dark-2xl;
 	padding-top: 30px;
 }
 
@@ -46,11 +45,11 @@
 }
 
 .nav-menu__link {
+	display: block;
 	color: $color-dark-s;
 }
 
 .nav-menu__link_active {
 	color: $color-light-s;
-	padding: 0 0 7px 0;
 	border-bottom: 3px solid $color-primary;
 }

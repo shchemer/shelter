@@ -1,3 +1,7 @@
+.donation {
+	background-color: $color-light-l;
+}
+
 .donation-container {
 	@include paddingForBlocks;
 }
@@ -21,8 +25,6 @@
 }
 .bank-name {
 	color: $color-dark-l;
-}
-.donation__credit-card {
 }
 .credit-card {
 	display: flex;
