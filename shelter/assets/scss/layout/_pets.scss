@@ -1,0 +1,42 @@
+.pets__container {
+	@include paddingForBlocks;
+}
+.pets__container > *:not(:last-child) {
+	margin: 0 0 60px 0;
+}
+.pets__title {
+	text-align: center;
+}
+.pets__slider {
+}
+.pets-slider {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 105px;
+}
+.pets-slider__item {
+	background-color: $color-light-s;
+	@include flexAllCenter;
+	flex-direction: column;
+	min-height: 435px;
+}
+.pets-slider__item > * {
+	margin: 0 0 30px 0;
+}
+.pets-slider__pet-img {
+}
+.pet-slider__pet-name {
+	color: $color-dark-l;
+}
+.pet-slider__btn-learn-more {
+	@include buttonStyle;
+	border: 2px solid $color-primary;
+}
+.pets__rest {
+	@include flexAllCenter;
+}
+.pets__btn-rest {
+	@include buttonStyle;
+	background-color: $color-primary;
+}

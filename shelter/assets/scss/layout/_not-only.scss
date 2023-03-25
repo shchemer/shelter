@@ -1,0 +1,31 @@
+.not-only {
+	position: relative;
+}
+.not-only__container {
+	padding-top: 180px;
+	display: flex;
+	background-color: $color-dark-2xl;
+}
+.not-only__body {
+	padding: 163px 0 243px 0;
+	max-width: 460px;
+}
+.not-only__body > *:not(:last-child) {
+	margin: 0 0 42px 0;
+}
+.not-only__title {
+	color: $color-light-xl;
+}
+.not-only__subtitle {
+	color: $color-dark-s;
+}
+.not-only__make-friend {
+	display: flex;
+	justify-content: flex-start;
+}
+.not-only__btn-make-friend {
+	@include buttonStyle;
+	background-color: $color-primary;
+}
+.not-only__puppy-img {
+}

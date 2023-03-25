@@ -1,0 +1,31 @@
+.footer-container {
+	padding-top: 40px;
+	background-color: $color-dark-l;
+	display: flex;
+}
+.contacts__title ~ *, .location__title ~ * {
+	color: $color-primary;
+}
+.contacts > *:not(:last-child) {
+	margin: 0 0 40px 0;
+}
+.contacts__title, .location__title {
+	color: $color-light-xl;
+}
+.contacts__email, .contacts__phone, .location__item {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.contacts__email-name, .contacts__phone-number, .location__name {
+	padding: 0 0 0 20px;
+}
+
+.location__title {
+	margin: 0 0 34px 0;
+}
+.location__item:not(:last-child) {
+	margin: 0 0 32px 0;
+}
+.footer__puppy-img {
+}

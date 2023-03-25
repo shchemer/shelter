@@ -1,0 +1,56 @@
+.header {
+	position: relative;
+}
+
+.header_absolute {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 20;
+}
+
+.header__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $color-dark-2xl;
+	padding-top: 30px;
+}
+
+.logo {
+	display: flex;
+	flex-direction: column;
+}
+
+.logo>*:first-child {
+	margin: 0 0 10px 0;
+}
+
+.logo__title {
+	display: block;
+	color: $color-primary;
+}
+
+.logo__subtitle {
+	color: $color-light-xl;
+	text-align: right;
+}
+
+.nav-menu {
+	display: flex;
+}
+
+.nav-menu > *:not(:last-child) {
+	margin: 0 35px 0 0;
+}
+
+.nav-menu__link {
+	color: $color-dark-s;
+}
+
+.nav-menu__link_active {
+	color: $color-light-s;
+	padding: 0 0 7px 0;
+	border-bottom: 3px solid $color-primary;
+}
