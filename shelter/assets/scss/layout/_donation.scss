@@ -32,7 +32,11 @@
 	padding: 10px 15px;
 	border-radius: 9px;
 }
-.credit-card__icon {
+.credit-card__link-number {
+	@include opacityEffect;
+}
+.credit-card__link-number:hover {
+	opacity: 0.5;
 }
 .credit-card__number {
 	color: $color-dark-l;

@@ -40,6 +40,13 @@
 	justify-content: flex-start;
 	align-items: center;
 	color: $color-primary;
+	@include opacityEffect;
+}
+
+.contacts__email-link:hover,
+.contacts__phone-link:hover,
+.location__item-link:hover {
+	opacity: 0.5;
 }
 
 .contacts__email-name,
