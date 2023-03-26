@@ -24,4 +24,9 @@
 	padding: 15px 45px;
 	border-radius: 100px;
 	@include textSettings($georgia, 400, 17, 6, 130%);
+	cursor: pointer;
+}
+
+@mixin opacityEffect {
+	transition: opacity 0.5s ease-in-out;
 }
