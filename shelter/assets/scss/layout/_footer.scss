@@ -5,7 +5,7 @@
 }
 
 .footer-container {
-	padding-top: 20px;
+	padding-top: 18px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -14,6 +14,9 @@
 .footer__contacts,
 .footer__location {
 	max-width: 300px;
+	display: flex;
+   flex-direction: column;
+   align-items: flex-start;
 }
 
 .contacts__title~*,
@@ -30,12 +33,13 @@
 	color: $color-light-xl;
 }
 
-.contacts__email,
-.contacts__phone,
-.location__item {
+.contacts__email-link,
+.contacts__phone-link,
+.location__item-link {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	color: $color-primary;
 }
 
 .contacts__email-name,

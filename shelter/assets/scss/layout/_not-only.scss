@@ -29,6 +29,9 @@
 	@include buttonStyle;
 	background-color: $color-primary;
 }
+.not-only__btn-make-friend:hover {
+	background: $color-light-xl
+}
 .not-only__puppy-img {
 	position: relative;
 	right: -42px;

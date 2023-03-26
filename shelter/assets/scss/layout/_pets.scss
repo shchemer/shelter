@@ -37,6 +37,10 @@
 	flex-direction: column;
 	min-height: 435px;
 }
+.pets-slider__item:hover .pet-slider__btn-learn-more{
+	border-color: $color-primary-ligth;
+	background: $color-primary-ligth;
+}
 .pets-slider__item > * {
 	margin: 0 0 30px 0;
 }
@@ -51,6 +55,7 @@
 	@include buttonStyle;
 	border: 2px solid $color-primary;
 	max-height: 52px;
+	transition: all 0.5s ease-in-out;
 }
 .pets__rest {
 	@include flexAllCenter;
