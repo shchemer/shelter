@@ -33,6 +33,7 @@ body {
 	@include textSettings($georgia, $regular, $body-fsize);
 	background: $color-light-xl;
 	color: $color-dark-l;
+	overflow: overlay;
 }
 
 ._container {
