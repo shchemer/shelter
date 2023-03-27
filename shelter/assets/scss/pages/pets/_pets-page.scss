@@ -1,0 +1,26 @@
+body#pets {
+	.header__container {
+		padding-bottom: 30px;
+	}
+
+	.logo__title {
+		color: $color-dark-l;
+	}
+	
+	.logo__subtitle {
+		color: $color-dark-3xl;
+	}
+	
+	.nav-menu__link {
+		color: $color-dark-l;
+	}
+
+	.nav-menu__link:not(.nav-menu__link_active):hover {
+		color: $color-dark-3xl;
+	}
+	
+	.nav-menu__link_active {
+		color: $color-dark-3xl;
+		border-bottom: 3px solid $color-primary;
+	}
+}
