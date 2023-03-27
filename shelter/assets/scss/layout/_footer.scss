@@ -2,18 +2,21 @@
 	position: relative;
 	background: url(../../../assets/images/background-noise.png), 
 					radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
+	min-height: 350px;
+	height: 1px;
 }
 
 .footer-container {
-	padding-top: 18px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	height: 100%;
 }
 
 .footer__contacts,
 .footer__location {
 	max-width: 300px;
+	min-height: 234px;
 	display: flex;
    flex-direction: column;
    align-items: flex-start;
@@ -25,7 +28,7 @@
 }
 
 .contacts>*:not(:last-child) {
-	margin: 0 0 40px 0;
+	margin: 0 0 38px 0;
 }
 
 .contacts__title,
@@ -56,15 +59,16 @@
 }
 
 .location__title {
-	margin: 0 0 34px 0;
+	margin: 0 0 29px 0;
 }
 
 .location__item:not(:last-child) {
-	margin: 0 0 32px 0;
+	margin: 0 0 34px 0;
 }
 
 .footer__puppy-img {
-	position: relative;
-	right: -20px;
-	bottom: -20px;
+	align-self: flex-end;
+	display: flex;
+	justify-content: flex-end;
+	flex-basis: 27%;
 }
