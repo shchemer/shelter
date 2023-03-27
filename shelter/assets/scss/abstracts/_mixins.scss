@@ -30,3 +30,24 @@
 @mixin opacityEffect {
 	transition: opacity 0.5s ease-in-out;
 }
+
+@mixin cardsWithPets {
+	background-color: $color-light-s;
+	flex-direction: column;
+	min-height: 435px;
+	transition: box-shadow 0.5s ease-in-out;
+	border-radius: 9px 9px 0 0;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+@mixin buttonForSwitching {
+	width: 52px;
+	height: 52px;
+	@include flexAllCenter;
+	border-radius: 50%;
+	border: 2px solid $color-primary;
+	@extend h4;
+	color: $color-dark-3xl;
+	cursor: pointer;
+}
