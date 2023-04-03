@@ -1183,16 +1183,7 @@ body#pets .nav-burger-menu__line {
   border-color: #FDDCC4;
 }
 
-@media (max-width: 970px) {
-  .catalog__container {
-    padding-bottom: 75px;
-  }
-  .catalog__title {
-    margin: 0 0 28px 0;
-  }
-  .catalog__items {
-    margin: 0 0 40px 0;
-  }
+@media (max-width: 1279.9px) {
   .catalog__item:not(:nth-child(-n+6)) {
     display: none;
   }
@@ -1206,9 +1197,6 @@ body#pets .nav-burger-menu__line {
   }
   .catalog__items {
     margin: 0 0 40px 0;
-  }
-  .catalog__item:not(:nth-child(-n+6)) {
-    display: none;
   }
 }
 @media (max-width: 640px) {
