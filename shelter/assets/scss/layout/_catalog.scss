@@ -84,20 +84,8 @@
 	border-color: $color-primary-ligth;
 }
 
-@include mediaQuery($bkpoint-970) {
+@include mediaQuery(1279.9px) {
 	.catalog {
-		&__container {
-			padding-bottom: 75px;
-		}
-
-		&__title {
-			margin: 0 0 28px 0;
-		}
-
-		&__items {
-			margin: 0 0 40px 0;
-		}
-
 		&__item:not(:nth-child(-n + 6)) {
 			display: none;
 		}
@@ -116,10 +104,6 @@
 
 		&__items {
 			margin: 0 0 40px 0;
-		}
-
-		&__item:not(:nth-child(-n + 6)) {
-			display: none;
 		}
 	}
 }
