@@ -23,4 +23,10 @@ body#pets {
 		color: $color-dark-3xl;
 		border-bottom: 3px solid $color-primary;
 	}
+
+	.nav-burger-menu::before,
+	.nav-burger-menu::after,
+	.nav-burger-menu__line {
+		background-color: $color-dark-4xl;
+	}
 }
