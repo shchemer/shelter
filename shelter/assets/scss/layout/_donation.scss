@@ -2,14 +2,21 @@
 	background-color: $color-light-l;
 }
 
-.donation-container {
+.donation__container {
 	@include paddingForBlocks;
 }
 .donation__row {
 	padding: 0 142px 0 143px;
 	@include flexAllCenter;
 }
+.donation__row > * {
+	flex: 0 1 50%
+}
 .donation__image {
+	flex-basis: 62%;
+}
+.donation__image img{
+	max-width: 100%;
 }
 .donation__body {
 	display: flex;
@@ -18,7 +25,7 @@
 	padding: 0 0 0 30px;
 }
 .donation__body > *:not(:last-child) {
-	margin: 0 0 20px 0;
+	margin: 0 0 19px 0;
 }
 .donation__title {
 	color: $color-dark-l;
@@ -44,4 +51,85 @@
 }
 .donation__info {
 	color: $color-dark-m;
+}
+@include mediaQuery($bkpoint-1214) {
+	.donation {
+		&__row {
+			padding: 0 82px 0 83px;
+		}
+	}
+}
+@include mediaQuery($bkpoint-1100) {
+	.donation {
+		&__row {
+			padding: 0 42px 0 43px;
+		}
+
+		&__body {
+			flex-basis: calc((100vw - 80px) / 2);
+		}
+	}
+}
+@include mediaQuery($bkpoint-970) {
+	.donation {
+		&__row {
+			padding: 0;
+		}
+
+		&__body {
+			flex-basis: calc((100vw - 80px) / 1.8);
+		}
+	}
+}
+@include mediaQuery($bkpoint-880) {
+	.donation {
+		&__row {
+			flex-direction: column;
+		}
+		&__body {
+			order: 0;
+			padding: 0;
+			margin: 0;
+			max-width: 380px;
+			flex-basis: 0;
+		}
+		&__image {
+			order: 1;
+			padding: 60px 0 0 0;
+			flex-basis: 0;
+		}
+	}
+}
+
+@include mediaQuery($bkpoint-526) {
+	.donation {
+		&__container {
+			@include paddingForBlocks(42px, 42px);
+		}
+
+		&__body {
+			align-items: center;
+			& > *:not(:last-child) {
+				margin: 0 0 22px 0;
+			}
+		}
+
+		.credit-card {
+			align-items: flex-end;
+		}
+
+		&__info {
+			text-align: justify;
+			padding: 0 10px;
+		}
+		
+		&__image {
+			padding: 42px 0 0 0;
+			text-align: center;
+		}
+
+		&__image img {
+			max-width: 88%;
+		}
+	}
 }

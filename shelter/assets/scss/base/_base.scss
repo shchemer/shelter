@@ -13,6 +13,7 @@ html, body {
 
 html {
 	scroll-behavior: smooth;
+	font-size: $html-fsize + px;
 }
 
 ol,
@@ -30,7 +31,7 @@ img {
 }
 
 body {
-	@include textSettings($georgia, $regular, $body-fsize);
+	@include textSettings($georgia, $regular, $html-fsize);
 	background: $color-light-xl;
 	color: $color-dark-l;
 	overflow: overlay;
@@ -42,4 +43,16 @@ body {
 	max-width: 1200px;
 	padding: 0 40px;
 	box-sizing: content-box;
+}
+
+@include mediaQuery($bkpoint-768) {
+	._container {
+		padding: 0 30px;
+	}
+}
+
+@include mediaQuery($bkpoint-526) {
+	._container {
+		padding: 0 10px;
+	}
 }

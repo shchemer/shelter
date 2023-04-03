@@ -1,7 +1,7 @@
 @mixin textSettings($ffamily, $fweight, $fsize, $letspacing: 0, $lineheight: normal, $fstyle: normal) {
 	font-family: $ffamily;
 	font-weight: $fweight;
-	font-size: calc($fsize / $body-fsize)+rem; 
+	font-size: calc($fsize / $html-fsize)+rem; 
 	letter-spacing: letterSpacing($fsize, $letspacing);
 	line-height: $lineheight;
 	font-style: $fstyle;
@@ -13,9 +13,9 @@
 	justify-content: center;
 }
 
-@mixin paddingForBlocks {
-	padding-top: 80px;
-	padding-bottom: 100px;
+@mixin paddingForBlocks($top: 80px, $bottom: 100px) {
+	padding-top: $top;
+	padding-bottom: $bottom;
 }
 
 @mixin buttonStyle {
@@ -50,4 +50,10 @@
 	@extend h4;
 	color: $color-dark-3xl;
 	cursor: pointer;
+}
+
+@mixin mediaQuery($bkpoint) {
+	@media (max-width: $bkpoint) {
+		@content;
+	}
 }
