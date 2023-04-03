@@ -1,9 +1,12 @@
 .catalog {
-	@include paddingForBlocks;
 	background: $color-light-l;
 }
 
-.catalog__container > *:not(:last-child) {
+.catalog__container {
+	@include paddingForBlocks;
+}
+
+.catalog__title, .catalog__items {
 	margin: 0 0 58px 0;
 }
 
@@ -14,7 +17,7 @@
 
 .catalog__items {
 	display: grid;
-	grid-template-columns: repeat(4, fit-content(270px));
+	grid-template-columns: repeat(auto-fit, 270px);
 	justify-content: center;
 	grid-gap: 30px 40px;
 }
@@ -22,6 +25,10 @@
 .catalog__item {
 	@include flexAllCenter;
 	@include cardsWithPets;
+}
+
+.catalog__item:not(:nth-child(-n + 8)) {
+	display: none;
 }
 
 .catalog__item:hover{
@@ -75,4 +82,66 @@
 .catalog__button:not(.catalog__button_disabled):not(.catalog__button_active-page):hover {
 	background: $color-primary-ligth;
 	border-color: $color-primary-ligth;
+}
+
+@include mediaQuery($bkpoint-970) {
+	.catalog {
+		&__container {
+			padding-bottom: 75px;
+		}
+
+		&__title {
+			margin: 0 0 28px 0;
+		}
+
+		&__items {
+			margin: 0 0 40px 0;
+		}
+
+		&__item:not(:nth-child(-n + 6)) {
+			display: none;
+		}
+	}
+}
+
+@include mediaQuery($bkpoint-970) {
+	.catalog {
+		&__container {
+			padding-bottom: 75px;
+		}
+
+		&__title {
+			margin: 0 0 28px 0;
+		}
+
+		&__items {
+			margin: 0 0 40px 0;
+		}
+
+		&__item:not(:nth-child(-n + 6)) {
+			display: none;
+		}
+	}
+}
+
+@include mediaQuery($bkpoint-640) {
+	.catalog {
+		&__item:not(:nth-child(-n + 3)) {
+			display: none;
+		}
+	}
+}
+
+@include mediaQuery($bkpoint-526) {
+	.catalog {
+		&__title {
+			margin: 0 0 42px 0;
+		}
+		&__container {
+			@include paddingForBlocks(42px, 42px);
+		}
+		&__buttons > *:not(:last-child) {
+			margin: 0 10px 0 0;
+		}
+	}
 }

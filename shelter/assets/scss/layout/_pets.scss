@@ -12,16 +12,20 @@
 	text-align: center;
 }
 .pets-slider {
+	padding: 0 105px;
+	position: relative;
+}
+.pets-slider__body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 105px;
-	position: relative;
 }
 .pets-slider__button {
 	position: absolute;
 	@include buttonForSwitching;
 	transition: all 0.5s ease-in-out;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .pets-slider__button:hover {
@@ -72,4 +76,67 @@
 }
 .pets__btn-rest:hover {
 	opacity: 0.5;
+}
+@include mediaQuery($bkpoint-1180) {
+	.pets {
+		&-slider__body {
+			justify-content: space-evenly;
+		}
+		&-slider__item:last-of-type {
+			display: none;
+		}
+	}
+}
+@include mediaQuery($bkpoint-970) {
+	.pets {
+		&-slider {
+			padding: 0;
+			&__body {
+				justify-content: center;
+				column-gap: 40px;
+			}
+		}
+	}
+}
+@include mediaQuery($bkpoint-767-9) {
+	.pets {
+		&-slider {
+			&__body {
+				margin-bottom: 20px;
+			}
+			&__buttons {
+				@include flexAllCenter;
+				justify-content: space-evenly;
+			}
+			&__button {
+				position: static;
+				transform: initial;
+			}
+		}
+	}
+}
+@include mediaQuery($bkpoint-627) {
+	.pets {
+		&-slider__item:not(:nth-of-type(1)) {
+			display: none;
+		}
+	}
+}
+@include mediaQuery($bkpoint-526) {
+	.pets {
+		&__container {
+			@include paddingForBlocks(42px, 42px);
+		}
+		&__container > *:not(:last-child) {
+			margin: 0 0 41px 0;
+		}
+		& &__title {
+			padding: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&-slider__button_prev {
+			margin-right: 20px;
+		}
+	}
 }
