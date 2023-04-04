@@ -68,7 +68,7 @@ h5 {
 	@include textSettings($arial, $regular, 12, 0, 150%, italic);
 }
 
-.paragraph-mobile-menu {
+.burger-menu__body a {
 	@include textSettings($arial, $regular, 32, 0, 160%);
 }
 
