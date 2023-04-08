@@ -30,7 +30,7 @@ body#pets {
 		background-color: $color-dark-4xl;
 	}
 
-	.burger-icon_active, .nav-menu__link {
+	.burger-icon_active, .burger-icon_active + .burger-menu .nav-menu__link {
 		filter: invert(1);
 	}
 	
