@@ -1,0 +1,72 @@
+.popup {
+	display: none;
+}
+
+.popup_active {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: $opacity-dark-3xl;
+	@include flexAllCenter;
+}
+
+.popup__wrapper {
+	position: relative;
+}
+
+.popup__window {
+	max-width: 900px;
+	height: 500px;
+	background-color: $color-light-s;
+	@include flexAllCenter;
+	align-items: stretch;
+	column-gap: 29px;
+	border-radius: 9px;
+	overflow: hidden;
+}
+
+.popup__button {
+	position: absolute;
+	top: -52px;
+	right: -42px;
+	@include buttonForSwitching;
+	transition: all 0.5s ease-in-out;
+}
+
+.popup__button:hover {
+	background: $color-primary-ligth;
+	border-color: $color-primary-ligth;
+}
+
+.popup__image {
+	display: flex;
+}
+
+.popup__text {
+	display: flex;
+	flex-direction: column;
+	padding: 50px 20px 0 0;
+}
+
+.popup__text > *:not(:last-child) {
+	margin-bottom: 40px;
+}
+
+.popup__name {
+	margin-bottom: 10px;
+}
+
+.popup__extra-info > *:not(:last-child) {
+	margin-bottom: 11px;
+}
+
+.popup__extra-item {
+	list-style-type: initial;
+	margin-left: 15px;
+}
+
+.popup__extra-item::marker {
+	color: $color-primary;
+}
