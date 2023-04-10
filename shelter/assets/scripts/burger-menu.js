@@ -17,7 +17,7 @@ function closeBurgerMenu(e) {
 }
 
 function closeBurgerMenuOnResize() {
-	if (window.innerWidth > 767) {
+	if (window.innerWidth > 767 && burgerIcon.classList.contains('burger-icon_active')) {
 		burgerIcon.classList.remove('burger-icon_active');
 		body.style.overflow = "overlay";
 	}
