@@ -73,6 +73,7 @@
 	color: $color-dark-s;
 	border-color: $color-dark-s;
 	cursor: auto;
+	pointer-events: none;
 }
 
 .catalog__button_active-page {
@@ -108,7 +109,7 @@
 	}
 }
 
-@include mediaQuery($bkpoint-640) {
+@include mediaQuery($bkpoint-639) {
 	.catalog {
 		&__item:not(:nth-child(-n + 3)) {
 			display: none;

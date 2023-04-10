@@ -34,9 +34,25 @@
 						<a href="#footer" class="paragraph-l nav-menu__link">Contacts</a>
 					</li>
 				</ul>
-				<ul class="nav__burger-menu nav-burger-menu">
-					<span class="nav-burger-menu__line"></span>
-				</ul>
+				<div class="nav-menu__burger-icon burger-icon">
+					<span class="burger-icon__line"></span>
+				</div>
+				<div class="nav__burger-menu burger-menu">
+					<ul class="burger-menu__body">
+						<li class="nav-menu__item">
+							<a href="#" class="paragraph-l nav-menu__link nav-menu__link_active">About the shelter</a>
+						</li>
+						<li class="nav-menu__item">
+							<a href="../pets/pets.html" class="paragraph-l nav-menu__link">Our pets</a>
+						</li>
+						<li class="nav-menu__item">
+							<a href="#help" class="paragraph-l nav-menu__link">Help the shelter</a>
+						</li>
+						<li class="nav-menu__item">
+							<a href="#footer" class="paragraph-l nav-menu__link">Contacts</a>
+						</li>
+					</ul>
+				</div>
 			</nav>
 		</div>
 	</header>
@@ -80,27 +96,77 @@
 			<div class="pets__container _container">
 				<h3 class="pets__title">Our friends who<br>are looking for a house</h3>
 				<div class="pets__slider pets-slider">
-					<div class="pets-slider__body">
-						<div class="pets-slider__item">
-							<div class="pets-slider__pet-img">
-								<img src="../assets/images/pets-katrine.png" alt="Katrine cat">
+					<div class="pets-slider__wrapper">
+						<div class="pets-slider__body">
+							<div class="pets-slider__slide">
+								<div class="pets-slider__item pets-item" id="">
+									<div class="pets-slider__pet-img">
+										<img src="" alt="">
+									</div>
+									<span class="pets-slider__pet-name"></span>
+									<a href="" class="pets-slider__btn-learn-more pets-item__btn-learn-more">Learn more</a>
+								</div>
+								<div class="pets-slider__item pets-item" id="">
+									<div class="pets-slider__pet-img">
+										<img src="" alt="">
+									</div>
+									<span class="pets-slider__pet-name"></span>
+									<a href="" class="pets-slider__btn-learn-more pets-item__btn-learn-more">Learn more</a>
+								</div>
+								<div class="pets-slider__item pets-item" id="">
+									<div class="pets-slider__pet-img">
+										<img src="" alt="">
+									</div>
+									<span class="pets-slider__pet-name"></span>
+									<a href="" class="pets-slider__btn-learn-more pets-item__btn-learn-more">Learn more</a>
+								</div>
 							</div>
-							<span class="pet-slider__pet-name">Katrine</span>
-							<a href="" class="pet-slider__btn-learn-more">Learn more</a>
-						</div>
-						<div class="pets-slider__item">
-							<div class="pets-slider__pet-img">
-								<img src="../assets/images/pets-jennifer.png" alt="Jennifer dog">
+							<div class="pets-slider__slide pets-items">
+								<div class="pets-slider__item pets-item" id="1">
+									<div class="pets-slider__pet-img">
+										<img src="../assets/images/pets-katrine.png" alt="Pet">
+									</div>
+									<span class="pets-slider__pet-name">Katrine</span>
+									<a href="" class="pets-slider__btn-learn-more pets-item__btn-learn-more">Learn more</a>
+								</div>
+								<div class="pets-slider__item pets-item" id="2">
+									<div class="pets-slider__pet-img">
+										<img src="../assets/images/pets-jennifer.png" alt="Pet">
+									</div>
+									<span class="pets-slider__pet-name">Jennifer</span>
+									<a href="" class="pets-slider__btn-learn-more pets-item__btn-learn-more">Learn more</a>
+								</div>
+								<div class="pets-slider__item pets-item" id="3">
+									<div class="pets-slider__pet-img">
+										<img src="../assets/images/pets-woody.png" alt="Pet">
+									</div>
+									<span class="pets-slider__pet-name">Woody</span>
+									<a href="" class="pets-slider__btn-learn-more pets-item__btn-learn-more">Learn more</a>
+								</div>
 							</div>
-							<span class="pet-slider__pet-name">Jennifer</span>
-							<a href="" class="pet-slider__btn-learn-more">Learn more</a>
-						</div>
-						<div class="pets-slider__item">
-							<div class="pets-slider__pet-img">
-								<img src="../assets/images/pets-woody.png" alt="Woody dog">
+							<div class="pets-slider__slide">
+								<div class="pets-slider__item pets-item" id="">
+									<div class="pets-slider__pet-img">
+										<img src="" alt="">
+									</div>
+									<span class="pets-slider__pet-name"></span>
+									<a href="" class="pets-slider__btn-learn-more pets-item__btn-learn-more">Learn more</a>
+								</div>
+								<div class="pets-slider__item pets-item" id="">
+									<div class="pets-slider__pet-img">
+										<img src="" alt="">
+									</div>
+									<span class="pets-slider__pet-name"></span>
+									<a href="" class="pets-slider__btn-learn-more pets-item__btn-learn-more">Learn more</a>
+								</div>
+								<div class="pets-slider__item pets-item" id="">
+									<div class="pets-slider__pet-img">
+										<img src="" alt="">
+									</div>
+									<span class="pets-slider__pet-name"></span>
+									<a href="" class="pets-slider__btn-learn-more pets-item__btn-learn-more">Learn more</a>
+								</div>
 							</div>
-							<span class="pet-slider__pet-name">Woody</span>
-							<a href="" class="pet-slider__btn-learn-more">Learn more</a>
 						</div>
 					</div>
 					<div class="pets-slider__buttons">
@@ -220,6 +286,10 @@
 			</div>
 		</div>
 	</footer>
+	<script src="../assets/scripts/pets.js"></script>
+	<script src="../assets/scripts/burger-menu.js"></script>
+	<script src="../assets/scripts/slider.js"></script>
+	<script src="../assets/scripts/popup.js"></script>
 </body>
 
 </html>

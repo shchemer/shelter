@@ -34,9 +34,25 @@
 						<a href="#footer" class="paragraph-l nav-menu__link">Contacts</a>
 					</li>
 				</ul>
-				<ul class="nav__burger-menu nav-burger-menu">
-					<span class="nav-burger-menu__line"></span>
-				</ul>
+				<div class="nav-menu__burger-icon burger-icon">
+					<span class="burger-icon__line"></span>
+				</div>
+				<div class="nav__burger-menu burger-menu">
+					<ul class="burger-menu__body">
+						<li class="nav-menu__item">
+							<a href="../main/index.html" class="paragraph-l nav-menu__link">About the shelter</a>
+						</li>
+						<li class="nav-menu__item">
+							<a href="../pets/pets.html" class="paragraph-l nav-menu__link nav-menu__link_active">Our pets</a>
+						</li>
+						<li class="nav-menu__item">
+							<a href="../main/index.html#help" class="paragraph-l nav-menu__link">Help the shelter</a>
+						</li>
+						<li class="nav-menu__item">
+							<a href="#footer" class="paragraph-l nav-menu__link">Contacts</a>
+						</li>
+					</ul>
+				</div>
 			</nav>
 		</div>
 	</header>
@@ -44,63 +60,7 @@
 		<section class="catalog">
 			<div class="catalog__container _container">
 				<h3 class="catalog__title">Our friends who<br>are looking for a house</h3>
-				<div class="catalog__items">
-					<div class="catalog__item">
-						<div class="catalog__item-img">
-							<img src="../assets/images/pets-katrine.png" alt="Katrine cat">
-						</div>
-						<span class="catalog__pet-name">Katrine</span>
-						<a href="" class="catalog__btn-learn-more">Learn more</a>
-					</div>
-					<div class="catalog__item">
-						<div class="catalog__item-img">
-							<img src="../assets/images/pets-jennifer.png" alt="Jennifer dog">
-						</div>
-						<span class="catalog__pet-name">Jennifer</span>
-						<a href="" class="catalog__btn-learn-more">Learn more</a>
-					</div>
-					<div class="catalog__item">
-						<div class="catalog__item-img">
-							<img src="../assets/images/pets-woody.png" alt="Woody dog">
-						</div>
-						<span class="catalog__pet-name">Woody</span>
-						<a href="" class="catalog__btn-learn-more">Learn more</a>
-					</div>
-					<div class="catalog__item">
-						<div class="catalog__item-img">
-							<img src="../assets/images/pets-sophia.png" alt="Sophia dog">
-						</div>
-						<span class="catalog__pet-name">Sophia</span>
-						<a href="" class="catalog__btn-learn-more">Learn more</a>
-					</div>
-					<div class="catalog__item">
-						<div class="catalog__item-img">
-							<img src="../assets/images/pets-timmy.png" alt="Timmy cat">
-						</div>
-						<span class="catalog__pet-name">Timmy</span>
-						<a href="" class="catalog__btn-learn-more">Learn more</a>
-					</div>
-					<div class="catalog__item">
-						<div class="catalog__item-img">
-							<img src="../assets/images/pets-charly.png" alt="Charly dog">
-						</div>
-						<span class="catalog__pet-name">Charly</span>
-						<a href="" class="catalog__btn-learn-more">Learn more</a>
-					</div>
-					<div class="catalog__item">
-						<div class="catalog__item-img">
-							<img src="../assets/images/pets-scarlet.png" alt="Scarlett dog">
-						</div>
-						<span class="catalog__pet-name">Scarlett</span>
-						<a href="" class="catalog__btn-learn-more">Learn more</a>
-					</div>
-					<div class="catalog__item">
-						<div class="catalog__item-img">
-							<img src="../assets/images/pets-freddie.png" alt="Freddie cat">
-						</div>
-						<span class="catalog__pet-name">Freddie</span>
-						<a href="" class="catalog__btn-learn-more">Learn more</a>
-					</div>
+				<div class="catalog__items pets-items">
 				</div>
 				<div class="catalog__buttons">
 					<span class="catalog__button catalog__button_first catalog__button_disabled">&#706;&#706;</span>
@@ -151,6 +111,10 @@
 			</div>
 		</div>
 	</footer>
+	<script src="../assets/scripts/pets.js"></script>
+	<script src="../assets/scripts/burger-menu.js"></script>
+	<script src="../assets/scripts/pagination.js"></script>
+	<script src="../assets/scripts/popup.js"></script>
 </body>
 
 </html>

@@ -24,9 +24,17 @@ body#pets {
 		border-bottom: 3px solid $color-primary;
 	}
 
-	.nav-burger-menu::before,
-	.nav-burger-menu::after,
-	.nav-burger-menu__line {
+	.burger-icon::before,
+	.burger-icon::after,
+	.burger-icon__line {
 		background-color: $color-dark-4xl;
 	}
+
+	.burger-icon_active, .burger-icon_active + .burger-menu .nav-menu__link {
+		filter: invert(1);
+	}
+	
+	.nav-menu__link_active {
+		border-color: #292929;
+	}	
 }
