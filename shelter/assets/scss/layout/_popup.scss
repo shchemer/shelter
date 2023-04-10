@@ -14,11 +14,11 @@
 
 .popup__wrapper {
 	position: relative;
+	margin: 0 42px;
 }
 
 .popup__window {
 	max-width: 900px;
-	height: 500px;
 	background-color: $color-light-s;
 	@include flexAllCenter;
 	align-items: stretch;
@@ -42,12 +42,26 @@
 
 .popup__image {
 	display: flex;
+	border-radius: 11px;
+	flex: 0 0 55.556%;
+	padding: 0 0 55.556% 0;
+	position: relative;
+}
+
+.popup__image img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
 }
 
 .popup__text {
 	display: flex;
 	flex-direction: column;
 	padding: 50px 20px 0 0;
+	flex: 1 1 auto;
 }
 
 .popup__text > *:not(:last-child) {
@@ -69,4 +83,81 @@
 
 .popup__extra-item::marker {
 	color: $color-primary;
+}
+
+@include mediaQuery($bkpoint-890) {
+	.popup {
+		&__text {
+			padding: 25px 12px 0 0;
+		}
+
+		&__text > *:not(:last-child) {
+			margin-bottom: 25px;
+		}
+	}
+}
+
+@include mediaQuery($bkpoint-820) {
+	.popup {
+		&__wrapper {
+			margin: 0 69px;
+		}
+
+		&__window {
+			column-gap: 11px;
+		}
+
+		&__text {
+			padding: 9px 0 0 0;
+		}
+
+		&__text > *:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		&__info {
+			font-size: 0.8125rem;
+		}
+
+		&__extra-info > *:not(:last-child) {
+			margin-bottom: 5px;
+	  }
+	}
+}
+
+@include mediaQuery($bkpoint-750) {
+	.popup {
+		&__image {
+			display: none;
+		}
+
+		&__text {
+			padding: 10px;
+		}
+	}
+}
+
+@include mediaQuery($bkpoint-526) {
+	.popup {
+		&__wrapper {
+			margin: 0 40px;
+		}
+
+		&__button {
+			right: -30px;
+		}
+
+		&__name {
+			font-size: 2.1875rem;
+		}
+
+		& &__text &__pet {
+			text-align: center;
+			font-size: 1.25rem;
+		}
+
+		& &__info {
+			margin-bottom: 24px;
+		}
+	}
 }
