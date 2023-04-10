@@ -98,7 +98,7 @@ function init({prev = false, next = false, direction = undefined} = {}) {
 		for (let i = 0; i < countActive; i++) {
 			prevItems[i].setAttribute('id', indexForChange[i]);
 			prevItems[i].querySelector('.pets-slider__pet-img img').setAttribute('src', `${pets[indexForChange[i] - 1]["img"]}`);
-			prevItems[i].querySelector('.pets-slider__pet-name').innerHTML = `${pets[indexForChange[i] - 1]["name"]}`;
+			prevItems[i].querySelector('.pets-slider__pet-name').innerHTML = pets[indexForChange[i] - 1]["name"];
 		}
 		setTimeout( () => {
 			sliderItems[1].innerHTML = sliderItems[0].innerHTML;
@@ -109,7 +109,7 @@ function init({prev = false, next = false, direction = undefined} = {}) {
 		for (let i = 0; i < countActive; i++) {
 			nextItems[i].setAttribute('id', indexForChange[i]);
 			nextItems[i].querySelector('.pets-slider__pet-img img').setAttribute('src', `${pets[indexForChange[i] - 1]["img"]}`);
-			nextItems[i].querySelector('.pets-slider__pet-name').innerHTML = `${pets[indexForChange[i] - 1]["name"]}`;
+			nextItems[i].querySelector('.pets-slider__pet-name').innerHTML = pets[indexForChange[i] - 1]["name"];
 		}
 		setTimeout( () => {
 			sliderItems[1].innerHTML = sliderItems[2].innerHTML;
@@ -124,7 +124,7 @@ function initDefault(count) {
 	for (let i = 0; i < countActive; i++) {
 		currItems[i].setAttribute('id', indexForChange[i]);
 		currItems[i].querySelector('.pets-slider__pet-img img').setAttribute('src', `${pets[indexForChange[i] - 1]["img"]}`);
-		currItems[i].querySelector('.pets-slider__pet-name').innerHTML = `${pets[indexForChange[i] - 1]["name"]}`;
+		currItems[i].querySelector('.pets-slider__pet-name').innerHTML = pets[indexForChange[i] - 1]["name"];
 	}
 }
 initDefault();
