@@ -1,0 +1,132 @@
+.footer {
+	position: relative;
+	background: url(../../../assets/images/background-noise.png), 
+					radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
+	min-height: 350px;
+	height: 1px;
+}
+
+.footer__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+
+.footer__contacts,
+.footer__location {
+	max-width: 300px;
+	min-height: 234px;
+	display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+
+.contacts__title~*,
+.location__title~* {
+	color: $color-primary;
+}
+
+.contacts>*:not(:last-child) {
+	margin: 0 0 38px 0;
+}
+
+.contacts__title,
+.location__title {
+	color: $color-light-xl;
+}
+
+.contacts__email-link,
+.contacts__phone-link,
+.location__item-link {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: $color-primary;
+	@include opacityEffect;
+}
+
+.contacts__email-link:hover,
+.contacts__phone-link:hover,
+.location__item-link:hover {
+	opacity: 0.5;
+}
+
+.contacts__email-name,
+.contacts__phone-number,
+.location__name {
+	padding: 0 0 0 20px;
+}
+
+.location__title {
+	margin: 0 0 29px 0;
+}
+
+.location__item:not(:last-child) {
+	margin: 0 0 34px 0;
+}
+
+.footer__puppy-img {
+	align-self: flex-end;
+	display: flex;
+	justify-content: flex-end;
+	flex-basis: 27%;
+}
+
+@include mediaQuery($bkpoint-1030) {
+	.footer {
+		min-height: auto;
+		height: auto; 
+		&__container {
+			justify-content: center;
+			flex-wrap: wrap;
+			padding-top: 33px;
+			column-gap: 38px;
+		}
+		&__puppy-img {
+			padding-top: 63px;
+			flex-basis: 100%;
+			justify-content: center;
+		}
+	}
+}
+
+@include mediaQuery($bkpoint-700) {
+	.footer {
+		&__container > *:not(:last-child) {
+			margin: 0 0 40px 0;
+		}
+
+		&__puppy-img {
+			padding-top: 0;
+		}
+	}
+}
+
+@include mediaQuery($bkpoint-526) {
+	.footer {
+		&__container {
+			padding-top: 30px;
+		}
+
+		&__column {
+			min-height: initial;
+		}
+
+		&__contacts {
+			align-items: center;
+		}
+
+		&__location>*:not(:last-child) {
+			margin: 0 0 40px 0;
+		}
+
+		.location__title {
+			padding: 0 10px;
+		}
+
+		&__puppy-img img {
+			max-width: 87%;
+		}
+	}
+}

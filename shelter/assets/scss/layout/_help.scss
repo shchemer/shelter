@@ -1,0 +1,76 @@
+.help__container {
+	@include paddingForBlocks;
+	padding-top: 77px;
+}
+.help__title {
+	text-align: center;
+	margin: 0 0 60px 0;
+}
+.help__body {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	column-gap: 120px;
+	row-gap: 55px;
+}
+.help__item {
+	@include flexAllCenter;
+	flex-direction: column;
+}
+.help-item__img {
+	width: 60px;
+	margin: 0 0 30px 0;
+}
+.help-item__title {
+	text-align: center;
+}
+
+@include mediaQuery($bkpoint-890) {
+	.help {
+		&__container {
+			padding-top: 80px;
+		}
+
+		&__body {
+			column-gap: 60px;
+		}
+
+		&__item {
+			flex-basis: 24%;
+		}
+	}
+}
+
+@include mediaQuery($bkpoint-767-9) {
+	.help {
+		&__body {
+			justify-content: flex-start;
+			column-gap: 0;
+		}
+		&__item {
+			flex-basis: 50%;
+		}
+	}
+}
+
+@include mediaQuery($bkpoint-526) {
+	.help {
+		&__container {
+			@include paddingForBlocks(42px, 42px);
+		}
+		&__title {
+			margin: 0 0 44px 0;
+		}
+		&__body {
+			column-gap: 20px;
+			row-gap: 30px;
+		}
+		&__item {
+			flex-basis: calc(50% - 10px);
+		}
+		&-item__img {
+			width: 50px;
+			margin: 0 0 20px 0;
+		}
+	}
+}

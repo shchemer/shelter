@@ -1,0 +1,132 @@
+.catalog {
+	background: $color-light-l;
+}
+
+.catalog__container {
+	@include paddingForBlocks;
+}
+
+.catalog__title, .catalog__items {
+	margin: 0 0 58px 0;
+}
+
+.catalog__title {
+	text-align: center;
+	margin: 0 0 58px 0;
+}
+
+.catalog__items {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 270px);
+	justify-content: center;
+	grid-gap: 30px 40px;
+}
+
+.catalog__item {
+	@include flexAllCenter;
+	@include cardsWithPets;
+}
+
+.catalog__item:not(:nth-child(-n + 8)) {
+	display: none;
+}
+
+.catalog__item:hover{
+	box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+.catalog__item:hover .catalog__btn-learn-more{
+	border-color: $color-primary-ligth;
+	background: $color-primary-ligth;
+}
+
+.catalog__item > * {
+	margin: 0 0 30px 0;
+}
+
+.catalog__pet-name {
+	color: $color-dark-l;
+	font-size: 1.25rem;
+	letter-spacing: 1.2px;
+}
+
+.catalog__btn-learn-more {
+	@include buttonStyle;
+	border: 2px solid $color-primary;
+	max-height: 52px;
+	transition: all 0.5s ease-in-out;
+}
+
+.catalog__buttons {
+	@include flexAllCenter;
+}
+
+.catalog__buttons > *:not(:last-child) {
+	margin: 0 20px 0 0;
+}
+
+.catalog__button {
+	@include buttonForSwitching;
+	transition: all 0.5s ease-in-out;
+}
+
+.catalog__button_disabled {
+	color: $color-dark-s;
+	border-color: $color-dark-s;
+	cursor: auto;
+	pointer-events: none;
+}
+
+.catalog__button_active-page {
+	background: $color-primary;
+}
+
+.catalog__button:not(.catalog__button_disabled):not(.catalog__button_active-page):hover {
+	background: $color-primary-ligth;
+	border-color: $color-primary-ligth;
+}
+
+@include mediaQuery(1279.9px) {
+	.catalog {
+		&__item:not(:nth-child(-n + 6)) {
+			display: none;
+		}
+	}
+}
+
+@include mediaQuery($bkpoint-970) {
+	.catalog {
+		&__container {
+			padding-bottom: 75px;
+		}
+
+		&__title {
+			margin: 0 0 28px 0;
+		}
+
+		&__items {
+			margin: 0 0 40px 0;
+		}
+	}
+}
+
+@include mediaQuery($bkpoint-639) {
+	.catalog {
+		&__item:not(:nth-child(-n + 3)) {
+			display: none;
+		}
+	}
+}
+
+@include mediaQuery($bkpoint-526) {
+	.catalog {
+		&__title {
+			margin: 0 0 42px 0;
+		}
+		&__container {
+			@include paddingForBlocks(42px, 42px);
+		}
+		&__buttons > *:not(:last-child) {
+			margin: 0 10px 0 0;
+		}
+	}
+}

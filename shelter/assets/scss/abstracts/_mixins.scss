@@ -1,0 +1,59 @@
+@mixin textSettings($ffamily, $fweight, $fsize, $letspacing: 0, $lineheight: normal, $fstyle: normal) {
+	font-family: $ffamily;
+	font-weight: $fweight;
+	font-size: calc($fsize / $html-fsize)+rem; 
+	letter-spacing: letterSpacing($fsize, $letspacing);
+	line-height: $lineheight;
+	font-style: $fstyle;
+}
+
+@mixin flexAllCenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin paddingForBlocks($top: 80px, $bottom: 100px) {
+	padding-top: $top;
+	padding-bottom: $bottom;
+}
+
+@mixin buttonStyle {
+	@include flexAllCenter;
+	color: $color-dark-3xl;
+	padding: 15px 45px;
+	border-radius: 100px;
+	@include textSettings($georgia, 400, 17, 6, 130%);
+	cursor: pointer;
+}
+
+@mixin opacityEffect {
+	transition: opacity 0.5s ease-in-out;
+}
+
+@mixin cardsWithPets {
+	background-color: $color-light-s;
+	flex-direction: column;
+	min-height: 435px;
+	transition: box-shadow 0.5s ease-in-out;
+	border-radius: 9px 9px 0 0;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+@mixin buttonForSwitching {
+	width: 52px;
+	height: 52px;
+	@include flexAllCenter;
+	border-radius: 50%;
+	border: 2px solid $color-primary;
+	@extend h4;
+	color: $color-dark-3xl;
+	cursor: pointer;
+}
+
+@mixin mediaQuery($bkpoint) {
+	@media (max-width: $bkpoint) {
+		@content;
+	}
+}

@@ -1,0 +1,95 @@
+.not-only {
+	position: relative;
+	background: url(../../../assets/images/background-noise.png)
+					,radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+}
+.not-only__container {
+	padding-top: 180px;
+	display: flex;
+}
+.not-only__body {
+	padding: 163px 0 243px 0;
+	max-width: 460px;
+}
+.not-only__body > *:not(:last-child) {
+	margin: 0 0 42px 0;
+}
+.not-only__title {
+	color: $color-light-xl;
+	max-width: 410px;
+}
+.not-only__subtitle {
+	color: $color-dark-s;
+}
+.not-only__make-friend {
+	display: flex;
+	justify-content: flex-start;
+}
+.not-only__btn-make-friend {
+	@include buttonStyle;
+	background-color: $color-primary;
+	transition: background 0.5s ease-in-out;
+}
+.not-only__btn-make-friend:hover {
+	background: $color-primary-ligth;
+}
+.not-only__puppy-img {
+	position: relative;
+	right: -42px;
+}
+.not-only__puppy-img img{
+	height: 100%;
+}
+
+@include mediaQuery($bkpoint-1030) {
+	.not-only {
+		&__container {
+			padding-top: 150px;
+			flex-direction: column;
+		}
+
+		&__body {
+			margin: auto;
+			padding: 0 0 100px 0;
+		}
+
+		&__make-friend {
+			justify-content: center;
+		}
+
+		&__puppy-img {
+			right: 0;
+			bottom: 0;
+			width: 80%;
+			margin-left: auto;
+		}
+
+		&__puppy-img img {
+			width: 100%;
+		}
+	}
+}
+
+@include mediaQuery($bkpoint-526) {
+	.not-only {
+		&__body {
+			padding: 0 0 105px 0;
+		}
+		&__body > *:not(:last-child) {
+			margin-bottom: 42px;
+		}
+		& &__title {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.not-only__subtitle {
+			text-align: center;
+		}
+
+		&__puppy-img {
+			right: auto;
+			margin-left: none;
+			width: 87%;
+		}
+	}
+}
