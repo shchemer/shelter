@@ -10,6 +10,7 @@
 	height: 100vh;
 	background-color: $opacity-dark-3xl;
 	@include flexAllCenter;
+	z-index: 80;
 }
 
 .popup__wrapper {
